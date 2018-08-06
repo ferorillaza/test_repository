@@ -52,20 +52,4 @@ public class TestClass {
       .body("title", is("delectus aut autem"))
       .body("completed", is(false));
   }
-
-  @Test
-  public void Test_JSON_Assert_2(){
-    given()
-      .log().all()
-      .get("http://jsonplaceholder.typicode.com/todos/2")
-      .then()
-      .log()
-      .all()
-      .statusCode(200)
-      .contentType(ContentType.JSON)
-      .body("userId", is(1))
-      .body("id", is(2))
-      .body("title", is("quis ut nam facilis et officia qui"))
-      .body("completed", is(false));
-  }
 }
